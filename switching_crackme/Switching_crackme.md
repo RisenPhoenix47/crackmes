@@ -1,7 +1,25 @@
 
-## Getting Started
+## Swithcing crackme writeup
 
 This is a writeup for [Switching crackme](https://crackmes.one/crackme/6784563e4d850ac5f7dc5137) on crackmes.one created by cat_puzzler. 
+
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#Initial analysis">Initial analysis</a>
+    </li>
+    <li>
+      <a href="#Ghidra analysis">Ghidra analysis</a>
+    </li>
+    <li><a href="#Function breakdown (main)">Function breakdown (main)</a></li>
+    <li><a href="#Function breakdown (check_id_xor)">Function breakdown (check_id_xor)</a></li>
+    <li><a href="#Function breakdown (check_id_sum)">Function breakdown (check_id_sum)</a></li>
+    <li><a href="#Return to the main function">Return to the main function</a></li>
+    <li><a href="#Solution">Solution</a></li>
+  </ol>
+</details>
 
 ### Initial analysis
 
