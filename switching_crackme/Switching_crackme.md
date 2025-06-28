@@ -90,6 +90,14 @@ The result of check_id_sum is verified to confirm  if the password is valid. If 
 
 ![image](https://github.com/user-attachments/assets/410f1fce-21d1-4e88-b477-4756c6b55e5b)
 
+### Summary
+Based off the analysis of the program above, we can outline the password requirements.
+1. Password must be between 5-254 characters long.
+2. Only numbers 0-9 car considered valuid inputs.
+3. The XOR result of the first entered number against the last entered number must be greater than both the first and last numbers.
+4. Hex values of the entered numbers are either added or subtracted from a total depending on if they are at an odd or even index value.
+5. The total number of this value must be equal to the XOR result returned in the check_id_xor funtion.
+
 ### Solution
-Based off the analysis of the program above, we can create a program that brute forces numbers that meet the password requirements. I chose to do this by rewriting each of the functions listed above in python and checking to see if the results match the criteria. The python script in this repo contains all of this information. Any number returned by this script will work as a password for the crackme challenge. 
+Based off the criteria listed, we can create a program that brute forces numbers that meet the password requirements. I chose to do this by rewriting each of the functions listed above in python and checking to see if the results match the criteria. The python script in this repo contains all of this information. Any number returned by this script will work as a password for the crackme challenge. 
 
