@@ -23,7 +23,7 @@ This is a writeup for [Switching crackme](https://crackmes.one/crackme/6784563e4
 
 ### Initial analysis
 
-Trying to run the program gives the following result. It takes the serial key as an argument. 
+Trying to run the program gives the following result. It takes the key as an argument. 
 
 ```
 user@user-VirtualBox:~/reverse_engineering/switching_crackme$ ./switching_crackme
