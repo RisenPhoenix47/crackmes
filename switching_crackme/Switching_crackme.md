@@ -22,7 +22,8 @@ Incorrect password
 
 Decompiling the program in Ghidra gives a breakdown of the source code. Let's start by looking at the main function. I've renamed some of the variables based on an initial analysis. 
 
-![[Pasted image 20250621101155.png]]
+![image](https://github.com/user-attachments/assets/34dfc655-20e4-413e-a080-81b4b102fae1)
+
 
 ### Function breakdown (main)
 
