@@ -67,7 +67,7 @@ After passing the password length and character check, two additional functions 
 
 
 ## 4. Function breakdown (check_id_xor)
-check_id_xor works by converting the ascii value of a number to a hex value from an ascii char by subracting 0x30 from the value. Then it performs a basic XOR with the first character in the string against the last character of the string. 
+check_id_xor works by converting the ascii value of a number to a hex value by subracting 0x30 from the value. Then it performs a basic XOR with the first character in the string against the last character of the string. 
 
 ![image](https://github.com/user-attachments/assets/e9a48b60-7d80-4a72-a9ee-14b61f4ecda1)
 
@@ -76,16 +76,16 @@ The result is then run through an if statement. If the result of the xor is less
 ![image](https://github.com/user-attachments/assets/ae424bf8-6541-42e4-abf5-e3e59c197442)
 
 ## 5. Function breakdown (check_id_sum)
-check_id_sum works by iterating through each character in the password, taking the int value of each character, then adding it to a value if it's index is even or subtracting it from the value if it's odd. 
+check_id_sum works by iterating through each character in the password, converting each ascii char to a hex value, then adding it to an overall value "i" if it's index is even or subtracting it from "i" if it's odd. 
 
 ![image](https://github.com/user-attachments/assets/6e56cf49-9f14-4f2a-b8e2-47288b2c3413)
 
-Once this is completed with every character in the string, it then compares it to the XOR value returned from check_id_xor. If the value is equal to the XOR value it returns a 1. If the value is different or a -1 was returned from check_id_xor, the function returns a 0. 
+Once this is completed with every character in the string, it then compares the value of "i" to the XOR value returned from check_id_xor. If the value is equal to the XOR value it returns a 1. If the value is different or a -1 was returned from check_id_xor, the function returns a 0. 
 
 ![image](https://github.com/user-attachments/assets/9fe8cfe9-c9e6-438a-afd4-809612303b54)
 
 ## 6. Return to the main function
-The result of check_id_sum is verified to confirm  if the password is valid. If the returned result is 1, the password is valid, if not, it calls the error function and the password is not valid. 
+The result of check_id_sum is verified to confirm if the password is valid. If the returned result is 1, the password is valid, if not, it calls the error function and the password is not valid. 
 
 ![image](https://github.com/user-attachments/assets/410f1fce-21d1-4e88-b477-4756c6b55e5b)
 
@@ -98,5 +98,5 @@ Based off the analysis of the program above, we can outline the password require
 5. The total number of this value must be equal to the XOR result returned in the check_id_xor funtion.
 
 ## 8. Solution
-Based off the criteria listed, we can create a program that brute forces numbers that meet the password requirements. I chose to do this by rewriting each of the functions listed above in python and checking to see if the results match the criteria. The python script in this repo contains all of this information. Any number returned by this script will work as a password for the crackme challenge. 
+Based off the criteria listed, we can create a program that brute forces numbers that meet the password requirements. I did this by rewriting each of the functions listed above in python and checking to see if the results match the criteria. The python script in this repo contains all of this information. Any number returned by this script will work as a password for the crackme challenge. 
 
