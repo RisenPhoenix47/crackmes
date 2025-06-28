@@ -6,7 +6,7 @@ This is a writeup for [Switching crackme](https://crackmes.one/crackme/6784563e4
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
-  <li>
+  <ol>
     <li>
       <a href="#Initial-analysis">Initial analysis</a>
     </li>
@@ -18,7 +18,7 @@ This is a writeup for [Switching crackme](https://crackmes.one/crackme/6784563e4
     <li><a href="#Function-breakdown-check_id_sum">Function breakdown (check_id_sum)</a></li>
     <li><a href="#Return-to-the-main-function">Return to the main function</a></li>
     <li><a href="#Solution">Solution</a></li>
-  </li>
+  </ol>
 </details>
 
 ### Initial analysis
