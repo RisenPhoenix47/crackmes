@@ -4,7 +4,6 @@
 This is a writeup for [Switching crackme](https://crackmes.one/crackme/6784563e4d850ac5f7dc5137) on crackmes.one created by cat_puzzler. 
 
 <!-- TABLE OF CONTENTS -->
-<details>
   <summary>Table of Contents</summary>
   <ol>
     <li>
@@ -19,7 +18,6 @@ This is a writeup for [Switching crackme](https://crackmes.one/crackme/6784563e4
     <li><a href="#Return-to-the-main-function">Return to the main function</a></li>
     <li><a href="#Solution">Solution</a></li>
   </ol>
-</details>
 
 ### Initial analysis
 
