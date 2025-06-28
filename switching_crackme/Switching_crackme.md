@@ -1,5 +1,5 @@
 
-## Swithcing crackme writeup
+## Switching crackme writeup
 
 This is a writeup for [Switching crackme](https://crackmes.one/crackme/6784563e4d850ac5f7dc5137) on crackmes.one created by cat_puzzler. 
 
@@ -20,7 +20,7 @@ This is a writeup for [Switching crackme](https://crackmes.one/crackme/6784563e4
   <li><a href="#8-Solution">Solution</a></li>
 </ol>
 
-### 1. Initial analysis
+## 1. Initial analysis
 
 Trying to run the program gives the following result. It takes the key as an argument. 
 
@@ -35,14 +35,14 @@ user@user-VirtualBox:~/reverse_engineering/switching_crackme$ ./switching_crackm
 Incorrect password
 
 ```
-### 2. Ghidra analysis
+## 2. Ghidra analysis
 
 Decompiling the program in Ghidra gives a breakdown of the source code. Let's start by looking at the main function. I've renamed some of the variables based on an initial analysis. 
 
 ![image](https://github.com/user-attachments/assets/5d5354f9-f04c-4b3a-b6f0-d642684e0060)
 
 
-### 3. Function breakdown (main)
+## 3. Function breakdown (main)
 
 The main function performs 2 key tasks for determining if the password is correct:
 
@@ -66,7 +66,7 @@ After passing the password length and character check, two additional functions 
 ![image](https://github.com/user-attachments/assets/92238a3d-4883-49f5-89d0-faf0ae045908)
 
 
-### 4. Function breakdown (check_id_xor)
+## 4. Function breakdown (check_id_xor)
 check_id_xor works by converting the ascii value of a number to a hex value from an ascii char by subracting 0x30 from the value. Then it performs a basic XOR with the first character in the string against the last character of the string. 
 
 ![image](https://github.com/user-attachments/assets/e9a48b60-7d80-4a72-a9ee-14b61f4ecda1)
@@ -75,7 +75,7 @@ The result is then run through an if statement. If the result of the xor is less
 
 ![image](https://github.com/user-attachments/assets/ae424bf8-6541-42e4-abf5-e3e59c197442)
 
-### 5. Function breakdown (check_id_sum)
+## 5. Function breakdown (check_id_sum)
 check_id_sum works by iterating through each character in the password, taking the int value of each character, then adding it to a value if it's index is even or subtracting it from the value if it's odd. 
 
 ![image](https://github.com/user-attachments/assets/6e56cf49-9f14-4f2a-b8e2-47288b2c3413)
@@ -84,12 +84,12 @@ Once this is completed with every character in the string, it then compares it t
 
 ![image](https://github.com/user-attachments/assets/9fe8cfe9-c9e6-438a-afd4-809612303b54)
 
-### 6. Return to the main function
+## 6. Return to the main function
 The result of check_id_sum is verified to confirm  if the password is valid. If the returned result is 1, the password is valid, if not, it calls the error function and the password is not valid. 
 
 ![image](https://github.com/user-attachments/assets/410f1fce-21d1-4e88-b477-4756c6b55e5b)
 
-### 7. Summary
+## 7. Summary
 Based off the analysis of the program above, we can outline the password requirements.
 1. Password must be between 5-254 characters long.
 2. Only numbers 0-9 car considered valuid inputs.
@@ -97,6 +97,6 @@ Based off the analysis of the program above, we can outline the password require
 4. Hex values of the entered numbers are either added or subtracted from a total depending on if they are at an odd or even index value.
 5. The total number of this value must be equal to the XOR result returned in the check_id_xor funtion.
 
-### 8. Solution
+## 8. Solution
 Based off the criteria listed, we can create a program that brute forces numbers that meet the password requirements. I chose to do this by rewriting each of the functions listed above in python and checking to see if the results match the criteria. The python script in this repo contains all of this information. Any number returned by this script will work as a password for the crackme challenge. 
 
