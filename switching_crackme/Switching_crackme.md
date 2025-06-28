@@ -70,7 +70,7 @@ Once this is completed with every character in the string, it then compares it t
 ### Return to the main function
 The result of check_id_sum is verified to confirm  if the password is valid. If the returned result is 1, the password is valid, if not, it calls the error function and the password is not valid. 
 
-![image](https://github.com/user-attachments/assets/e20fe24b-84de-4d0d-aae9-071ea3994cd4)
+![image](https://github.com/user-attachments/assets/410f1fce-21d1-4e88-b477-4756c6b55e5b)
 
 ### Solution
 Based off the analysis of the program above, we can create a program that brute forces numbers that meet the password requirements. I chose to do this by rewriting each of the functions listed above in python and checking to see if the results match the criteria. The python script in this repo contains all of this information. Any number returned by this script will work as a password for the crackme challenge. 
