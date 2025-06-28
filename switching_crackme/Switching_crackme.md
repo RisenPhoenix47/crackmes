@@ -8,15 +8,15 @@ This is a writeup for [Switching crackme](https://crackmes.one/crackme/6784563e4
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#Initial analysis">Initial analysis</a>
+      <a href="#Initial-analysis">Initial analysis</a>
     </li>
     <li>
-      <a href="#Ghidra analysis">Ghidra analysis</a>
+      <a href="#Ghidra-analysis">Ghidra analysis</a>
     </li>
-    <li><a href="#Function breakdown (main)">Function breakdown (main)</a></li>
-    <li><a href="#Function breakdown (check_id_xor)">Function breakdown (check_id_xor)</a></li>
-    <li><a href="#Function breakdown (check_id_sum)">Function breakdown (check_id_sum)</a></li>
-    <li><a href="#Return to the main function">Return to the main function</a></li>
+    <li><a href="#Function-breakdown-(main)">Function breakdown (main)</a></li>
+    <li><a href="#Function-breakdown-(check_id_xor)">Function breakdown (check_id_xor)</a></li>
+    <li><a href="#Function-breakdown-(check_id_sum)">Function breakdown (check_id_sum)</a></li>
+    <li><a href="#Return-to-the-main-function">Return to the main function</a></li>
     <li><a href="#Solution">Solution</a></li>
   </ol>
 </details>
