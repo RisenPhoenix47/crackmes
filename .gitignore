@@ -1,0 +1,5 @@
+#Ignore pasted images
+Pasted*
+
+#Ignore obsidian notes
+.obsidian/
